@@ -1,0 +1,151 @@
+/* CSS 작성 */
+/* 오늘의 발견 페이지 스타일 */
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 1010px;
+  height: 1020px;
+  margin-top: 100px;
+  margin-bottom: 48px;
+}
+
+
+/* 헤더 영역 */
+
+.header .logo {
+  width: 176px;
+  height: 40px;
+}
+
+/* 섹션 영역 */
+
+.container {
+  position: relative;
+  margin-top: 75px;
+  /*로고와 오늘의 발견 사이*/
+  width: auto;
+  height: auto;
+}
+
+.container::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+.today_discovery h3 {
+  display: flex;
+  align-items: center;
+
+}
+
+.today_discovery span {
+  font-weight: 500;
+}
+
+.today_discovery span:nth-child(1) {
+  font-size: 24px;
+}
+
+.today_discovery span:nth-child(2) {
+  width: 2px;
+  margin: 0 10px;
+  color: #aaa9a9;
+}
+
+.today_discovery span:nth-child(3) {
+  margin-right: 0;
+  font-size: 16px;
+  color: #aaa9a9;
+}
+
+
+/* 아이템 영역 */
+
+.item_container {
+  position: relative;
+  margin-top: 24px;
+  margin-bottom: 48px;
+  /* 오늘의 발견과 아이템 영역 사이 */
+}
+
+.item {
+  width: calc(100% + 32px);
+  float: left;
+}
+
+.item_container::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.item li {
+  position: relative;
+  margin: 0 16px 12px 0;
+  padding: 14px 21px;
+
+  width: 243px;
+  height: 310px;
+  float: left;
+
+  list-style: none;
+
+  border: 1px solid #C4C4C4;
+}
+
+.item li.big {
+  width: 502px;
+  height: 310px;
+  padding: 20px 28px;
+}
+
+
+.item li img {
+  width: 100%;
+}
+
+
+.item li a {
+  text-decoration: none;
+}
+
+.item li span {
+  position: absolute;
+  top: 248px;
+  left: 20px;
+  /* >의 위치 */
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  line-height: 42px;
+  color: #f3f3f3;
+  background: rgba(0, 0, 0, 0.2);
+  transition: background-color 1s;
+}
+
+.item li:hover span,
+.item li:focus span {
+  width: 112px;
+  background-color: #0074E9;
+}
+
+.item li:hover,
+.item li:focus {
+  border: 1px solid #0074E9;
+}
+
+
+
+.item li:hover span::before,
+.item li:focus span::before {
+  content: '구매하기';
+  margin-right: 16px;
+}

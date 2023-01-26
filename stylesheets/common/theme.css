@@ -1,0 +1,10 @@
+/* Theme 스타일 작성 */
+/* 피그마 시안 color 시스템을 보고 변수로 선언 */
+:root {
+  --color-red: #E52330;
+  --color-blue: #0096E4;
+  --color-green: #C7CD1D;
+  --color-black: #181818;
+  --color-gray: #DCDCDC;
+  --color-white: #FFFFFF;
+}
